@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>{%load staticfiles%}
+	<title>bind </title>
+	<meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+	$('#first_name').change(function(){
+		const url=$('#personform').attr("data-cities-url");
+		const regid=$(this).val()
+		var data;
+		alert(regid);
+		$.ajax({
+			type:'GET',
+			url:url,
+
+			datatype:json,
+			contentType:'application/json; charset = utf-8',
+			data:{
+				'Regid':regid
+			},
+			success: function(data)	{
+				var data1=JSON.stringify(data);
+				alert(data1S);
+				$.each(data,function(key,value){
+					alert(key+" : "+value);
+					alert(value);
+					$('#lstname'),.val(value);
+				});
+			}
+		})
+	})
+</script>
+</head>
+<body>
+	<form method="post" id="personform" data-cities-url=" {%url 'getidfirstname' %}">
+		{%csrf_token%}
+<h1>bind</h1>
+
+{% if Students %}
+ <select id="first_name">
+ 	<option>PLease select</option>
+ 	{% for a,b in Students %}
+ 	<option value=='{{a}}'>{{b}}</option>
+ 	{%endfor%}
+ </select>
+<div id="stage">
+	lastname:<input type="text" value="" name="" id="lstname">
+	
+	{%endif%}
+</div>
+</form>
+
+
+</body>
+</html>

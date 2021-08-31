@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/4.4.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<title>Display</title>
+</head>
+<body>
+	<form method="POST">
+		{%csrf_token%}
+		<h1>student Information</h1>
+		<a href="/login/">Login</a>
+		<div>
+		</div>
+		{% if Students %}
+			<table border="2">
+				<thead>
+					<th>Firstname</th>
+					<th>Lastname</th>
+					<th>Username</th>
+					<th>Password</th>
+					<th>EmailID</th>
+					<th>AccountNo</th>
+					<th>Balance</th>
+					<th>Address</th>
+					<th>Edit</th>
+				</thead>
+				{% for a,b,c,d,e,f,g,h in Students %}
+				<tr>
+					<td>{{a}}</td>
+					<td>{{b}}</td>
+					<td>{{c}}</td>
+					<td>{{d}}</td>
+					<td>{{e}}</td>
+					<td>{{f}}</td>
+					<td>{{g}}</td>
+					<td>{{h}}</td>
+					<td><input type="submit" name="" class="btn btn-danger" value="Delete"></td>
+
+					
+				</tr>
+				{%endfor%}
+			</table>
+			{%else%}
+			<p>No Student Records found !!</p>
+			{%endif%}
+		
+	</form>
+		
+
+</body>
+</html>

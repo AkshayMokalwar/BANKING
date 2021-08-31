@@ -1,0 +1,12 @@
+
+-- Q1) print the detail of customer born after 01 jan 20000 from table tbl_customer
+-- Q2)print the detail  of customer and calculate age and name column as "AGE" from table tbl_customer
+-- Q3) print the detail of customer born before 01 jan 2000 from table tbl_customer
+-- Q4)print the detail  of customer and "AGE"  from table tbl_customer whoose Age is greater than 21
+-- Q5) print the detail of customer born After 01 jan 1990 and before 01 jan 2002  from table tbl_customer
+-- Q6) print the unique cities from table tbl_customer
+-- Q7) print the unique cities and total number of custmer from each unique  city from table tbl_customer
+-- Q8) print the detail of customer in ascending order firstname  who lives in same city 
+-- Q9) print the detail of customer in descending order of their firstname  who lives in same city 
+-- Q10)print the detail of customer in  ascending by their pincode
+-- Q11)print total unique pincode in ascending by their pincode with same city

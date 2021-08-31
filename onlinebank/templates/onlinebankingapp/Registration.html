@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>{%load staticfiles%}
+
+	<title>Registration</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/4.4.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<meta charset="utf-8">
+</head>
+<body>
+	<form method="POST">
+		{% csrf_token %}
+		<div class="container">
+			<div class="col-md-12">
+				<div class="col-md-2"></div>
+				<div class="col-md-8">
+					<div class="panel panel-primary" style="margin-top: 100px;">
+						<div class="panel-heading">
+							<div class="panel-title">
+								Registration
+								
+							</div>
+							
+						</div>
+						<div class="panel-body">
+							<!-- first row -->
+							<div class="row">
+								<!-- For Firstname -->
+								<div class="col-md-4">
+									Firstname:<input type="text" value="" name="txtfirstname" class="form-control" placeholder="Enter Firstname">
+									
+								</div>
+								<!-- For Lastname -->
+								<div class="col-md-4">
+									Lastname:<input type="text" value="" name="txtlastname" class="form-control" placeholder="Enter Lastname">
+									
+								</div>
+								<!-- For Username -->
+								<div class="col-md-4">
+									Username:<input type="text" value="" name="txtusername" class="form-control" placeholder="Enter Username">
+									
+								</div>
+								
+							</div>
+							<!-- second row -->
+							<div class="row">
+								<!-- For Password -->
+								<div class="col-md-4">
+									Password:<input type="Password" value="" name="txtpassword" class="form-control" placeholder="Enter Password">
+									
+								</div>
+								<!-- For EmailID -->
+								<div class="col-md-4">
+									EmailID:<input type="text" value="" name="txtemailid" class="form-control" placeholder="Enter EmailID">
+									
+								</div>
+								<!-- For Mobile No-->
+								<div class="col-md-4">
+									Mobile No:<input type="text" value="" name="txtmobileno" class="form-control" placeholder="Enter Mobile No:">
+									
+								</div>
+								
+							</div>
+							<!-- Third Row -->
+							<div class="row">
+								<!-- For Account No -->
+								<div class="col-md-4">
+									Account No:<input type="text" value="" name="txtaccountno" class="form-control" placeholder="Enter Account No">
+									
+								</div>
+								<!-- For Balance -->
+								<div class="col-md-4">
+									Balance:<input type="text" value="" name="txtbalance" class="form-control" placeholder="Enter Balance">
+									
+								</div>
+								<!-- For Address-->
+								<div class="col-md-4">
+									Address:<input type="text" value="" name="txtaddress" class="form-control" placeholder="Enter Address:">
+									
+								</div>
+								
+							</div><br>
+							<!-- next row -->
+							<div class="row" align="center">
+								<input type="submit"  value="submit" name="" class="btn btn-primary">
+								<input type="button"  value="cancel" name="" class="btn btn-warning">
+								
+							</div>
+
+						</div>
+
+						
+					</div>
+				</div>
+				<div class="col-md-2"></div>
+				
+			</div>
+			
+		</div>
+		
+	</form>
+		
+
+</body>
+</html>

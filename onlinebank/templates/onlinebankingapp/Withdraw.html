@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>{%load staticfiles%}
+
+	<title>Withdraw</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/4.4.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<meta charset="utf-8">
+</head>
+<body><form method="POST">
+		{% csrf_token %}
+		<div class="container">
+			<div class="col-md-12">
+				<div class="col-md-4"></div>
+				<div class="col-md-4">
+					<div class="panel panel-primary">
+						<div class="panel-heading">
+							<div class="panel-title">Withdraw Master</div>
+						</div>
+						<div class="panel-body">
+							{% if Students%}
+							{% for a,b in Students%}
+
+							<!-- first row -->
+							<div class="row">
+								Account No:<input type="text" value="{{a}}" name="txtaccountno" class="form-control" placeholder="Enter Account No">
+							</div>
+							<!-- second row -->
+							<div class="row">
+								Balance:<input type="text" value="{{b}}" name="txtbalance" class="form-control" placeholder="Enter Balance">
+							</div>
+
+							{%endfor%}
+							<!-- third row -->
+							<div class="row">
+								Withdraw:<input type="text" value="" name="txtwithdraw" class="form-control" placeholder="Enter Withdraw">
+							</div>
+							<br>
+							{%else%}
+							<p>No Student Record Found!!!</p>
+							{%endif%}
+							<div class="row" align="center">
+								<input type="submit" value="Withdraw" class="btn btn-primary" name="">
+								<input type="button" value="cancel" class="btn btn-warning" name="" >
+								
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4"></div>
+			</div>
+		</div>
+	</form>
+</body>
+</html>

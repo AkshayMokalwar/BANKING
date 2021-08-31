@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>dummy</title>
+</head>
+<body>
+	<form method="POST">
+		{% csrf_token %}
+		{% if Records %}
+		{% for a,b in Records %}
+		<h1>Your Passwrod id :{b}}</h1>
+		{%endfor%}
+		{%endif%}
+		
+	</form>
+		
+
+</body>
+</html>
